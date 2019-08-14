@@ -1,0 +1,14 @@
+<h1><%= @input.field1 %></h1>
+
+
+<%= link_to "Enter different input to test", new_input_path, class: 'btn btn-success' %>
+
+
+<h2> Methods:</h2>
+
+<p>conform_ssn(): <%=conform_s_s_n(@input.field1)%></p>
+<p>conform_ssn(): <%=conform_ssn(@input.field1)%></p>
+<p>is_ssn(): <%=is_ssn(@input.field1)%></p>
+<p>is_itin(): <%=is_itin(@input.field1)%></p>
+<p>conform_ein(): <%=conform_ein(@input.field1)%></p>
+<p>conform_phone(): <%=conform_phone(@input.field1)%></p>

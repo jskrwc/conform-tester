@@ -1,0 +1,12 @@
+<h1> Index of inputs</h1>
+
+
+
+
+
+<% @inputs.each do |input| %>
+  <p>
+    <%= link_to input.field1 input_path(input) %> | <%= link_to 'Edit', edit_input_path(input) %>
+    | <%= link_to 'Delete', input, method: :delete %>
+  </p>
+<% end %>
