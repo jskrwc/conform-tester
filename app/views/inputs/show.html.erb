@@ -1,14 +1,51 @@
-<h1><%= @input.field1 %></h1>
+<div style="padding-left: 2em;">
+
+  <h1><%= @input.field1 %></h1>
 
 
-<%= link_to "Enter different input to test", new_input_path, class: 'btn btn-success' %>
+  <%= link_to "Enter different input to test", new_input_path, class: 'btn btn-success' %>
 
 
-<h2> Methods:</h2>
+  <h3> Methods:</h3>
+  <br>
 
-<p>conform_ssn(): <%=conform_s_s_n(@input.field1)%></p>
-<p>conform_ssn(): <%=conform_ssn(@input.field1)%></p>
-<p>is_ssn(): <%=is_ssn(@input.field1)%></p>
-<p>is_itin(): <%=is_itin(@input.field1)%></p>
-<p>conform_ein(): <%=conform_ein(@input.field1)%></p>
-<p>conform_phone(): <%=conform_phone(@input.field1)%></p>
+  <h4> Local Methods</h4>
+  --for testing methods within this app (so don't have to save and bundle gem each time to test changes)
+
+
+  <pre>
+  <h5> Local Method                                                         Output </h5>
+
+  conform_ssn():                                                      <%=conform_ssn(@input.field1)%>
+
+  </pre>
+
+  <br>
+
+
+  <h4> Conformer Gem Methods</h4>
+  <pre>
+  <h5>  Method fr Conformer Gem                                             Output </h5>
+
+  conform_ssn():                                                     <%=Conformer.conform_ssn(@input.field1)%>
+  conform_s_s_n():                                                   <%=Conformer.conform_s_s_n(@input.field1)%>
+
+  is_ssn():                                                          <%=Conformer.is_ssn(@input.field1)%>
+  is_itin():                                                         <%=Conformer.is_itin(@input.field1)%>
+
+  conform_ein():                                                     <%=Conformer.conform_ein(@input.field1)%>
+  conform_ei_n():                                                    <%=Conformer.conform_ei_n(@input.field1)%>
+
+  conform_phone():                                                   <%=Conformer.conform_phone(@input.field1)%>
+  conform_phone_num():                                               <%=Conformer.conform_phone_num(@input.field1)%>
+
+
+  state_name_fr_abbr():                                              <%=Conformer.state_name_fr_abbr(@input.field1)%>
+  st_abbr_fr_name():                                                 <%=Conformer.st_abbr_fr_name(@input.field1)%>
+
+  month_fr_num():                                                    <%=Conformer.month_fr_num(@input.field1)%>
+  month_num_fr_month():                                              <%=Conformer.month_num_fr_month(@input.field1)%>
+  month_fr_mo():                                                     <%=Conformer.month_fr_mo(@input.field1)%>
+
+  </pre>
+</div/

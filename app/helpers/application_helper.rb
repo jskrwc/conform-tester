@@ -7,7 +7,7 @@ module ApplicationHelper
     def conform_ssn(n)
       n = n.gsub(/[^0-9]/ ,"")
       if n.length != 9
-        return "error"
+        return "INVALID DATA - not 9 digit number"
       else
         return n
       end
@@ -35,7 +35,7 @@ module ApplicationHelper
     def conform_ein(n)
       n = n.gsub(/[^0-9]/ ,"")
       if n.length != 9
-        return "error"
+        return "error- not 9 digits"
       else
         return n
       end
@@ -55,7 +55,7 @@ module ApplicationHelper
       n = n.gsub(/[^0-9]/ ,"")
       n[0] = "" if n[0] == '1'
       if n.length != 10
-        return "error"
+        return "error- not a 10 digit phone number"
       else
         return n.insert(3,'-').insert(-5,'-')
       end

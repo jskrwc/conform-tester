@@ -1,9 +1,13 @@
-Enter information to be formatted
-<hr>
-<%= form_for @input do |f| %>
-  Input: <%= f.text_field :field1 %> <br/>
+<div style="padding-left: 2em;">
 
-  <%= f.submit "Save", class: 'btn btn-success' %>
-<% end %>
+  Enter information to be formatted
+  <hr>
+  <%= form_for @input do |f| %>
+    Input: <%= f.text_field :field1 %> <br/>
 
-<hr>
+    <%= f.submit "Save", class: 'btn btn-success' %>
+  <% end %>
+
+  <hr>
+
+</div>
